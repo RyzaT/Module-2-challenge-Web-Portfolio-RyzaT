@@ -7,15 +7,15 @@
 /* Custom Properties */
 
 :root {
-  --ff-primary: 'Source Sans Pro', sans-serif;
-  --ff-secondary: 'Source Code Pro', monospace;
+  --ff-primary: 'Roboto' , sans-serif;
+  --ff-secondary: 'Lora' , monospace;
 
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --clr-light: rgb(218, 231, 235);
-  --clr-dark:  #303030;
-  --clr-accent: #16e0bd;
+  --clr-light: rgb(234, 220, 161);
+  --clr-dark:  #0a0a09;
+  --clr-accent: #c9901f;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
