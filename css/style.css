@@ -13,7 +13,7 @@
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --clr-light: #fff;
+  --clr-light: rgb(218, 231, 235);
   --clr-dark:  #303030;
   --clr-accent: #16e0bd;
 
@@ -101,7 +101,7 @@ h3 {font-size: var(--fs-h3);}
   font-weight: var(--fw-reg);
 }
 .section__title--intro strong {
-  display: block;
+  display: inline-block;
 }
 .section__subtitle {
   margin: 0;
@@ -169,16 +169,60 @@ header {
 .nav__link:hover {
     color: var(--clr-accent);
 }
+.nav-toggle {
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background-color: var(--clr-dark);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; }
 
 /* Intro Section */
 
 .intro {
-  position: relative;
-}
+    display: flex;
+
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 1em;
+    grid-template-areas:
+    "img title"
+    "img subtitle";
+    grid-template-columns: min-content max-content;
+  }
 
 .intro__img {
   background-image: url("css/images/cartoon.jpg");
   box-shadow: var(--bs);
+  position: relative;
+
 }
 
 @media (min-width: 600px) {
@@ -291,7 +335,9 @@ header {
     font-size: var(--fs-h3);
 }
 .page-section_contact a { color: inherit;
+
 }
+
 .social-list__item {
     list-style: none;
     display: flex;
